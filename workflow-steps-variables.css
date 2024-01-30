@@ -1,0 +1,66 @@
+/* Adjust the variable values as you see fit */
+:root {
+	--workflow-container-width: auto;
+	--workflow-container-background-color: #fff;
+	--workflow-container-border-color: #dddddd;
+	--workflow-container-border-radius: 4px;
+	--workflow-container-padding: 20px;
+	--workflow-container-background-line-color: #20639B;
+	--workflow-container-background-line-thickness: 2px;
+
+	--workflow-steps-gap: 26px;
+	--workflow-step-max-width: 200px;
+
+	--workflow-item-title-font-size: 16px;
+	--workflow-item-title-font-weight: normal;
+	--workflow-item-title-font-color: #333;
+
+	--workflow-item-link-underline: underline;
+	--workflow-item-link-color: #20639B;
+	
+	--workflow-item-description-font-size: 12px;
+	--workflow-item-description-font-color: #444;
+
+	--workflow-item-circle-size: 30px;
+	--workflow-item-circle-border-color: transparent;
+	--workflow-item-circle-border-size: 1px;
+	--workflow-item-circle-border-style: solid;
+	--workflow-item-icon-color: #333;
+	--workflow-item-icon-background-color: #f5f5f5;
+	--workflow-item-icon-distance-from-title: 10px;
+}
+
+.workflow-steps-item-container[status='ok'],
+.workflow-steps-item-container[status='complete'],
+.workflow-steps-item-container[status='completed'],
+.workflow-steps-item-container[status='done'] {
+	--workflow-item-icon-background-color: #009688;
+	--workflow-item-icon-color: white;
+}
+
+.workflow-steps-item-container[status='error'] {
+	--workflow-item-icon-background-color: #954661;
+	--workflow-item-icon-color: #fff;
+}
+
+.workflow-steps-item-container[status='warning'] {
+	--workflow-item-icon-background-color: #EEE8A9;
+	--workflow-item-icon-color: #333;
+}
+
+.workflow-steps-item-container[status='current'] {
+	--workflow-item-icon-background-color: #20639B;
+	--workflow-item-icon-color: white;
+
+	& .workflow-steps-step-icon {
+		outline: 3px solid #20639B;
+		outline-offset: 3px;
+		box-shadow: 0 0 0 3px var(--workflow-container-background-color);
+	}
+}
+
+.workflow-steps-item-container[status='pending'] {
+	--workflow-item-icon-background-color: #f2f2f2;
+	--workflow-item-icon-color: #333;
+	--workflow-item-circle-border-color: #ccc;
+}

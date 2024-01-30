@@ -1,0 +1,117 @@
+/*No need to change anything in this file*/
+#app .workflow-steps-container {
+    --workflow-container-background-line-starting-pos: calc(var(--workflow-container-padding) + (var(--workflow-item-circle-size) / 2) - (var(--workflow-container-background-line-thickness) / 2));
+    
+    display: inline-flex;
+    flex-direction: column;
+    width: var(--workflow-container-width);
+    background-color: var(--workflow-container-background-color);
+    padding: var(--workflow-container-padding);
+    border: 1px solid var(--workflow-container-border-color);
+    border-radius: var(--workflow-container-border-radius);
+    align-items: stretch;
+    justify-items: center;
+    gap: var(--workflow-steps-gap);
+    background-image: 
+        linear-gradient(to bottom, var(--workflow-container-background-color) var(--workflow-container-background-line-starting-pos), transparent var(--workflow-container-background-line-starting-pos)),
+        linear-gradient(to bottom, transparent calc(100% - var(--workflow-container-background-line-starting-pos)), var(--workflow-container-background-color) calc(100% - var(--workflow-container-background-line-starting-pos))),
+        linear-gradient(to right, var(--workflow-container-background-color) var(--workflow-container-background-line-starting-pos), var(--workflow-container-background-line-color) var(--workflow-container-background-line-starting-pos), var(--workflow-container-background-line-color) calc(var(--workflow-container-background-line-starting-pos) + var(--workflow-container-background-line-thickness)), var(--workflow-container-background-color) calc(var(--workflow-container-background-line-starting-pos) + var(--workflow-container-background-line-thickness)));
+
+    &:is(.workflow-horizontal) {
+        flex-direction: row;
+        justify-items: start;
+        background-image: 
+            linear-gradient(to right, var(--workflow-container-background-color) var(--workflow-container-background-line-starting-pos), transparent var(--workflow-container-background-line-starting-pos)),
+            linear-gradient(to right, transparent calc(100% - var(--workflow-container-background-line-starting-pos)), var(--workflow-container-background-color) calc(100% - var(--workflow-container-background-line-starting-pos))),
+            linear-gradient(to bottom, var(--workflow-container-background-color) var(--workflow-container-background-line-starting-pos), var(--workflow-container-background-line-color) var(--workflow-container-background-line-starting-pos), var(--workflow-container-background-line-color) calc(var(--workflow-container-background-line-starting-pos) + var(--workflow-container-background-line-thickness)), var(--workflow-container-background-color) calc(var(--workflow-container-background-line-starting-pos) + var(--workflow-container-background-line-thickness)));
+
+        & .workflow-steps-item-container {
+            grid-template-columns: auto;
+            grid-template-areas:
+                "icon"
+                "title"
+                "description";
+            place-items: center;
+            grid-column-gap: 0;
+
+            & .workflow-steps-step-description, 
+            & .workflow-steps-step-title,
+            & .workflow-steps-item-link {
+                text-align: center;
+            }
+
+            & .workflow-steps-step-icon {
+                margin-bottom: var(--workflow-item-icon-distance-from-title);
+                align-self: start;
+            }
+        }
+        & .workflow-steps-item-container:first-child {
+            background-image: linear-gradient(to right, var(--workflow-container-background-color) 50%, transparent 50%);
+        }
+        & .workflow-steps-item-container:last-child {
+            background-image: linear-gradient(to right, transparent 50%, var(--workflow-container-background-color) 50%);
+        }
+    }
+
+    & .workflow-steps-item-container {
+        display: inline-grid;
+        grid-column-gap: var(--workflow-item-icon-distance-from-title);
+        grid-template-columns: var(--workflow-item-circle-size) minmax(auto, var(--workflow-step-max-width));
+        align-items: center;
+        grid-template-areas:
+            "icon title"
+            "icon description";
+        width: 100%;
+        height: 100%;
+
+        & .workflow-steps-step-icon {
+            grid-area: icon;
+            align-self: center;
+            display: grid;
+            place-items: center;
+            position: relative;
+            border-width: var(--workflow-item-circle-border-size);
+            border-style: var(--workflow-item-circle-border-style);
+            border-radius: 50%;
+            border-color: var(--workflow-item-circle-border-color);
+            border-radius: 50%;
+            background-color: var(--workflow-item-icon-background-color);
+            background-position: calc(var(--workflow-item-circle-size) / 2) 0;
+            height: var(--workflow-item-circle-size);
+            width: var(--workflow-item-circle-size);
+            color: var(--workflow-item-icon-color);
+            aspect-ratio: 1;
+            margin-bottom: 0;
+        }
+
+        & .workflow-steps-step-description {
+            grid-area: description;
+            font-size: var(--workflow-item-description-font-size);
+            color: var(--workflow-item-description-font-color);
+            text-align: left;
+        }
+
+        & .workflow-steps-step-title {
+            grid-area: title;
+            font-size: var(--workflow-item-title-font-size);
+            font-weight: var(--workflow-item-title-font-weight);
+            color: var(--workflow-item-title-font-color);
+            text-align: left;
+        }
+
+        & .workflow-steps-item-link {
+            grid-area: title;
+            font-size: var(--workflow-item-title-font-size);
+            font-weight: var(--workflow-item-title-font-weight);
+            color: var(--workflow-item-link-color);
+            text-decoration: var(--workflow-item-link-underline);
+            text-align: left;
+        }
+    }
+    & .workflow-steps-item-container:first-child {
+        background-image: linear-gradient(to bottom, var(--workflow-container-background-color) 50%, transparent 50%);
+    }
+    & .workflow-steps-item-container:last-child {
+        background-image: linear-gradient(to bottom, transparent 50%, var(--workflow-container-background-color) 50%);
+    }
+}
