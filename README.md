@@ -10,7 +10,7 @@ https://github.com/stadium-software/workflow-steps/assets/2085324/0fa1bae8-8bfa-
 # Setup
 
 ## Dependency
-In order to display icons in the workflow, the [Icons Module](https://github.com/stadium-software/icons) must be implemented in the application. There is no need to call this script as it will be called by the "WorkflowSteps" script below if icons are specified. The "Icons" Global Script and CSS files must, however, exist in the GlobalScripts and EnbeddedFiles folders as described in the [Icons](https://github.com/stadium-software/icons) repo
+In order to display icons in the workflow, the [Icons Module](https://github.com/stadium-software/icons) must be implemented in the application. There is no need to call the "Icons" script from this repo as it will, if necessary, be called by the "WorkflowSteps" script below. The "Icons" Global Script and CSS files must, however, exist in the GlobalScripts and EnbeddedFiles folders as described in the [Icons](https://github.com/stadium-software/icons) repo
 
 ## Application Setup
 1. Check the *Enable Style Sheet* checkbox in the application properties
