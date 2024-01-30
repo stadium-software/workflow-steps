@@ -25,7 +25,7 @@ In order to display icons in the workflow, the [Icons Module](https://github.com
    5. link (Any)
    6. position (Any)
 
-![Type Properties](images/type-properties.png)
+![Type Properties](images/TypeProperties.png)
 
 ## Global Script Setup
 1. Create a Global Script called "WorkflowSteps"
