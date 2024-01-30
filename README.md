@@ -161,7 +161,7 @@ init();
    5. link (relative or absolute url): Optionally, add a link
    6. position (int): The position of the step in the workflow
 
-![Object Editor](images/ObjectEditor.png) ![Workflow Stepper Display](images/Workflow-Stepper-Display)
+![Object Editor](images/ObjectEditor.png) ![Workflow Stepper Display](images/Workflow-Stepper-Display.png)
 
 6. Drag the Global Script called "WorkflowSteps" into the EventHandler
 7. Provide values for the script input parameters
