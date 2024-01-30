@@ -134,6 +134,8 @@ init();
 2. Add a class to the *Container* classes property to uniquely identify the control (e.g. workflow-steps-display)
 3. By default the workflow is displayed vertically. To change the direction to horizontal, add the class "workflow-horizontal" to the *Container* (e.g. workflow-steps-display workflow-horizontal)
 
+![Container Properties](images/ContainerProperties.png)
+
 ## Page.Load Setup
 1. Drag a *List* control into the Page.Load event handler and name it (e.g. StepsList)
 2. Select the "WorkflowStep" type in the *Item Type* property dropdown of the *List*
