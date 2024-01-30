@@ -175,7 +175,9 @@ init();
 ## Customising the display
 The *workflow-steps-variables.css* file included in this repo contains a set of variables that can be changed to customise the workflow-steps implementation 
 1. Open the CSS file called [*workflow-steps-variables.css*](workflow-steps-variables.css) from this repo in an editor of your choice (I recommend [VS Code](https://code.visualstudio.com/))
-2. Adjust the variables in the *:root* element as you see fit
+2. Adjust the variables in the *:root* element as you see fit to change the general workflow display
+3. Adjust the variables in the status-specific elements to adjust the display of any specific status (e.g. .workflow-steps-item-container[status='warning'])
+4. Add a class to display additional statuses as per the examples provided in the [*workflow-steps-variables.css*](workflow-steps-variables.css) file and add the corresponding status in the workflow step *status* property
 
 ## Applying the CSS
 How to apply the CSS to your application
