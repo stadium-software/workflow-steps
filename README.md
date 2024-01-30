@@ -147,7 +147,7 @@ init();
 5. Use the *Object Editor* to add your workflow steps
    1. title (string)
    2. description (string): Optionally a short description
-   3. status (enum): The status is used to style the icon step. By default, the following statuses are supported
+   3. status (enum): The status is only used to style the icon step. By default, the listed here statuses are supported. To adjust status display styles or add new statuses see [Customising the display](#customising-the-display) below
       1. ok / complete / completed / done (any of these terms will work)
       2. error
       3. warning
