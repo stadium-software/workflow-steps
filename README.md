@@ -157,7 +157,7 @@ init();
       1. Implement the [Icons](https://github.com/stadium-software/icons) module
       2. Locate the icon name (see [Finding an icon](https://github.com/stadium-software/icons#finding-an-icon))
       3. Copy the name of the symbol (e.g. ic:sharp-check or svg-spinners:gooey-balls-1) and paste it into the iconclasses parameter
-      4. Icons colours and sizes can also be defined as classes (space-separated) (e.g. material-symbols:chat-error-sharp icon-size-16 icon-color-red) (see [Icon Styles](https://github.com/stadium-software/icons#icon-styles))
+      4. Icon colours and sizes can also be defined as classes (space-separated) (e.g. material-symbols:chat-error-sharp icon-size-16 icon-color-red) (see [Icon Styles](https://github.com/stadium-software/icons#icon-styles))
    5. link (relative or absolute url): Optionally, add a link
    6. position (int): The position of the step in the workflow
 
@@ -167,6 +167,8 @@ init();
 7. Provide values for the script input parameters
    1. Steps: Select the List containing the workflow steps (e.g. "StepsList")
    2. ContainerClass: Enter the classname you assigned to the *Container* control above (e.g. workflow-steps-display)
+
+![Script inputs](images/ScriptInputs.png)
 
 # Styling
 
