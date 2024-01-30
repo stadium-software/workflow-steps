@@ -132,6 +132,7 @@ init();
 ## Page Setup
 1. Drag a *Container* control to a page 
 2. Add a class to the *Container* classes property to uniquely identify the control (e.g. workflow-steps-display)
+3. By default the workflow is displayed vertically. To change the direction to horizontal, add the class "workflow-horizontal" to the *Container* (e.g. workflow-steps-display workflow-horizontal)
 
 ## Page.Load Setup
 1. Drag a *List* control into the Page.Load event handler and name it (e.g. StepsList)
@@ -163,7 +164,7 @@ init();
 
 ![Object Editor](images/ObjectEditor.png) ![Workflow Steps Display](images/Workflow-Steps-Display.png)
 
-6. Drag the Global Script called "WorkflowSteps" into the EventHandler
+6. Drag the Global Script called "WorkflowSteps" into the Page.Load EventHandler
 7. Provide values for the script input parameters
    1. Steps: Select the List containing the workflow steps (e.g. "StepsList")
    2. ContainerClass: Enter the classname you assigned to the *Container* control above (e.g. workflow-steps-display)
