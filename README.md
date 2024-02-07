@@ -21,9 +21,10 @@ In order to display icons in the workflow, the [Icons Module](https://github.com
    1. title (Any)
    2. description (Any)
    3. status (Any)
-   4. iconclasses (Any)
-   5. link (Any)
-   6. position (Any)
+   4. icon (Any)
+   5. iconclasses (Any)
+   6. link (Any)
+   7. position (Any)
 
 ![Type Properties](images/TypeProperties.png)
 
@@ -68,11 +69,15 @@ let initWorkflow = () => {
         if (!/^(ok|complete|completed|error|warning|current|done)$/.test(status)) { 
             status = "pending";
         }
-        let classes = arrSteps[i].iconclasses;
+        let icon = arrSteps[i].icon;
+        let classes = "";
         let hasIcon = false;
-        if (classes) {
-            classes = classes.toLowerCase();
-            if (classes.indexOf("stadium-icon") == -1) classes += " stadium-icon";
+        if (icon) {
+            classes = icon;
+            if (arrSteps[i].iconclasses) {
+                classes += " " + arrSteps[i].iconclasses.toLowerCase();
+                if (classes.indexOf("stadium-icon") == -1) classes += " stadium-icon";
+            }
             callIcons = true;
             hasIcon = true;
         }
@@ -156,13 +161,13 @@ init();
       3. warning
       4. current
       5. pending (default)
-   4. iconclasses: In order to display an icon against the step, you must 
+   4. icon (optional): In order to display an icon against a step, you must 
       1. Implement the [Icons](https://github.com/stadium-software/icons) module
       2. Locate the icon name (see [Finding an icon](https://github.com/stadium-software/icons#finding-an-icon))
-      3. Copy the name of the symbol (e.g. ic:sharp-check or svg-spinners:gooey-balls-1) and paste it into the iconclasses parameter
-      4. Icon colours and sizes can also be defined as classes (space-separated) (e.g. material-symbols:chat-error-sharp icon-size-16 icon-color-red) (see [Icon Styles](https://github.com/stadium-software/icons#icon-styles))
-   5. link (relative or absolute url): Optionally, add a link
-   6. position (int): The position of the step in the workflow
+      3. Copy the name of the symbol (e.g. ic:sharp-check or svg-spinners:gooey-balls-1) and paste it into the icon parameter
+   5. iconclasses: If you are using icons, you can additionally define the icon colours and sizes as classes (space-separated) (e.g. icon-size-16 icon-color-red) (see [Icon Styles](https://github.com/stadium-software/icons#icon-styles))
+   6. link (relative or absolute url): Optionally, add a link
+   7. position (int): The position of the step in the workflow
 
 ![Object Editor](images/ObjectEditor.png) ![Workflow Steps Display](images/Workflow-Steps-Display.png)
 
