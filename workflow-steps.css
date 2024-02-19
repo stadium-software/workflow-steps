@@ -1,4 +1,4 @@
-/*No need to change anything in this file*/
+/* CSS version 1.0 https: //github.com/stadium-software/workflow-steps */
 #app .workflow-steps-container {
     --workflow-container-background-line-starting-pos: calc(var(--workflow-container-padding) + (var(--workflow-item-circle-size) / 2) - (var(--workflow-container-background-line-thickness) / 2));
     

@@ -36,7 +36,7 @@ In order to display icons in the workflow, the [Icons Module](https://github.com
 3. Drag a *JavaScript* action into the script
 4. Add the Javascript below into the JavaScript code property
 ```javascript
-/* Stadium Script Version 1.0 */
+/* Stadium Script Version 1.0 https://github.com/stadium-software/workflow-steps */
 let arrSteps = ~.Parameters.Input.Steps;
 let containerClassName = ~.Parameters.Input.ContainerClass;
 let containerClass = "." + containerClassName;
