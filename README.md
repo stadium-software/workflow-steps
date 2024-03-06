@@ -6,6 +6,7 @@ https://github.com/stadium-software/workflow-steps/assets/2085324/0fa1bae8-8bfa-
 
 ## Version 
 1.0 - initial
+1.1 - Improved Global Script calling method
 
 # Setup
 
@@ -36,7 +37,7 @@ In order to display icons in the workflow, the [Icons Module](https://github.com
 3. Drag a *JavaScript* action into the script
 4. Add the Javascript below into the JavaScript code property
 ```javascript
-/* Stadium Script Version 1.0 https://github.com/stadium-software/workflow-steps */
+/* Stadium Script Version 1.1 https://github.com/stadium-software/workflow-steps */
 let arrSteps = ~.Parameters.Input.Steps;
 let containerClassName = ~.Parameters.Input.ContainerClass;
 let containerClass = "." + containerClassName;
@@ -56,8 +57,14 @@ let callIcons = false;
 let isHorizontal = container.classList.contains("workflow-horizontal");
 
 const sortMe = (arr, key) => arr.sort((a, b) => (a[key] > b[key] ? 1 : a[key] < b[key] ? -1 : 0));
+let wait = async (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 let icons = async () => {
-    await this.$globalScripts().Icons(containerClassName);
+    try {
+        await this.$globalScripts().Icons();
+        return true;
+    } catch (error) {
+        wait(100).then(() => icons());
+    }
 };
 let initWorkflow = () => {
     arrSteps = sortMe(arrSteps, "Position");
@@ -127,11 +134,7 @@ let initWorkflow = () => {
         icons();
     }
 };
-let wait = async (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
-let init = () => { 
-    wait(100).then(() => initWorkflow());
-};
-init();
+initWorkflow();
 ```
 
 ## Page Setup
