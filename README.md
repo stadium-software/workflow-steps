@@ -6,12 +6,10 @@ https://github.com/stadium-software/workflow-steps/assets/2085324/0fa1bae8-8bfa-
 
 ## Version 
 1.0 - initial
+
 1.1 - Improved Global Script calling method
 
 # Setup
-
-## Dependency
-In order to display icons in the workflow, the [Icons Module](https://github.com/stadium-software/icons) must be implemented in the application. There is no need to call the "Icons" script from this repo as it will, if necessary, be called by the "WorkflowSteps" script below. The "Icons" Global Script and CSS files must, however, exist in the GlobalScripts and EnbeddedFiles folders as described in the [Icons](https://github.com/stadium-software/icons) repo
 
 ## Application Setup
 1. Check the *Enable Style Sheet* checkbox in the application properties
@@ -164,11 +162,8 @@ initWorkflow();
       3. warning
       4. current
       5. pending (default)
-   4. icon (optional): In order to display an icon against a step, you must 
-      1. Implement the [Icons](https://github.com/stadium-software/icons) module
-      2. Locate the icon name (see [Finding an icon](https://github.com/stadium-software/icons#finding-an-icon))
-      3. Copy the name of the symbol (e.g. ic:sharp-check or svg-spinners:gooey-balls-1) and paste it into the icon parameter
-   5. iconclasses: If you are using icons, you can additionally define the icon colours and sizes as classes (space-separated) (e.g. icon-size-16 icon-color-red) (see [Icon Styles](https://github.com/stadium-software/icons#icon-styles))
+   4. icon (optional): This parameter is only necessary if you want to use the [icons module](#icons) to display icons in the step  
+   5. iconclasses (optional): This parameter is only necessary if you want to use the [icons module](#icons) to display icons in the step 
    6. link (relative or absolute url): Optionally, add a link
    7. position (int): The position of the step in the workflow
 
@@ -180,6 +175,38 @@ initWorkflow();
    2. ContainerClass: Enter the classname you assigned to the *Container* control above (e.g. workflow-steps-display)
 
 ![Script inputs](images/ScriptInputs.png)
+
+## Icons
+There are two methods to display icons in workflow steps
+
+### CSS icons
+To display icons referenced in your StyleSheet, follow these steps
+1. Craft selectors to match your statuses like below (the example is for the "pending" step)
+2. Find an icon file you want to use 
+   1. I like to use this site https://icones.js.org/collection/all
+   2. Find and select an icon and select "Data URL"
+   3. Paste the value into the background-image: url() function as shown below
+3. Add the remaining attributes shown in the example below
+```css
+#app .workflow-steps-item-container[status='pending'] .workflow-steps-step-icon {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMyNDI0MjQiIGQ9Ik01IDIxcS0uODI1IDAtMS40MTItLjU4N1QzIDE5VjVxMC0uODI1LjU4OC0xLjQxMlQ1IDNoOC45MjVsLTIgMkg1djE0aDE0di02Ljk1bDItMlYxOXEwIC44MjUtLjU4NyAxLjQxM1QxOSAyMXptNC02di00LjI1bDkuMTc1LTkuMTc1cS4zLS4zLjY3NS0uNDV0Ljc1LS4xNXEuNCAwIC43NjMuMTV0LjY2Mi40NUwyMi40MjUgM3EuMjc1LjMuNDI1LjY2M1QyMyA0LjR0LS4xMzcuNzM4dC0uNDM4LjY2MkwxMy4yNSAxNXpNMjEuMDI1IDQuNGwtMS40LTEuNHpNMTEgMTNoMS40bDUuOC01LjhsLS43LS43bC0uNzI1LS43TDExIDExLjU3NXptNi41LTYuNWwtLjcyNS0uN3psLjcuN3oiLz48L3N2Zz4=);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 20px; 
+	font-size: 0px;
+}
+```
+
+### Icons module
+In order to display icons using the Icons module, the [Icons Module](https://github.com/stadium-software/icons) must be implemented in the application. There is no need to call the "Icons" script from this repo as it will, if necessary, be called by the "WorkflowSteps" script below. The "Icons" Global Script and CSS files must, however, exist in the GlobalScripts and EnbeddedFiles folders as described in the [Icons](https://github.com/stadium-software/icons) repo. To implement an icon, follow these steps:
+
+1. Implement the [Icons](https://github.com/stadium-software/icons) module
+2. Locate the icon name (see [Finding an icon](https://github.com/stadium-software/icons#finding-an-icon))
+3. Copy the name of the symbol (e.g. ic:sharp-check or svg-spinners:gooey-balls-1) and paste it into the icon parameter
+
+**Styling icons**
+
+If you are using icons, you can additionally define the icon colours and sizes as classes (space-separated) (e.g. icon-size-16 icon-color-red) (see [Icon Styles](https://github.com/stadium-software/icons#icon-styles))
 
 ## Customising the display
 The *workflow-steps-variables.css* file included in this repo contains a set of variables that can be changed to customise the workflow-steps implementation 
