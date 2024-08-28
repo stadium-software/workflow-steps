@@ -1,11 +1,11 @@
-/* CSS version 1.0 https: //github.com/stadium-software/workflow-steps */
+/* CSS version 1.0 https://github.com/stadium-software/workflow-steps */
 :root {
 	--workflow-container-width: auto;
 	--workflow-container-background-color: #fff;
 	--workflow-container-border-color: #dddddd;
 	--workflow-container-border-radius: 4px;
 	--workflow-container-padding: 20px;
-	--workflow-container-background-line-color: #20639B;
+	--workflow-container-background-line-color: rgb(25, 118, 210);
 	--workflow-container-background-line-thickness: 2px;
 
 	--workflow-steps-gap: 26px;
