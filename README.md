@@ -189,6 +189,7 @@ To display icons referenced in your StyleSheet, follow these steps
 3. Add the remaining attributes shown in the example below
 ```css
 #app .workflow-steps-item-container[status='pending'] .workflow-steps-step-icon {
+    /*Wrap icon value in double quotes as shown*/
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IiMyNDI0MjQiIGQ9Ik01IDIxcS0uODI1IDAtMS40MTItLjU4N1QzIDE5VjVxMC0uODI1LjU4OC0xLjQxMlQ1IDNoOC45MjVsLTIgMkg1djE0aDE0di02Ljk1bDItMlYxOXEwIC44MjUtLjU4NyAxLjQxM1QxOSAyMXptNC02di00LjI1bDkuMTc1LTkuMTc1cS4zLS4zLjY3NS0uNDV0Ljc1LS4xNXEuNCAwIC43NjMuMTV0LjY2Mi40NUwyMi40MjUgM3EuMjc1LjMuNDI1LjY2M1QyMyA0LjR0LS4xMzcuNzM4dC0uNDM4LjY2MkwxMy4yNSAxNXpNMjEuMDI1IDQuNGwtMS40LTEuNHpNMTEgMTNoMS40bDUuOC01LjhsLS43LS43bC0uNzI1LS43TDExIDExLjU3NXptNi41LTYuNWwtLjcyNS0uN3psLjcuN3oiLz48L3N2Zz4=");
 	background-repeat: no-repeat;
 	background-position: center;
