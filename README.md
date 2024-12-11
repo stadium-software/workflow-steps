@@ -33,7 +33,7 @@ https://github.com/stadium-software/workflow-steps/assets/2085324/0fa1bae8-8bfa-
    1. ContainerClass
    2. Steps
 3. Drag a *JavaScript* action into the script
-4. Add the Javascript below into the JavaScript code property
+4. Add the Javascript below unchanged into the JavaScript code property
 ```javascript
 /* Stadium Script Version 1.1 https://github.com/stadium-software/workflow-steps */
 let arrSteps = ~.Parameters.Input.Steps;
