@@ -312,6 +312,11 @@ Example update definition that removes the classes "pending" from all items with
 }]
 ```
 
+4. Drag the Global Script called "WorkflowStepsUpdate" to the event handler
+5. Complete the input parameters
+   1. Updates: The list of steps (e.g. UpdatesList)
+   2. ContainerClass: The class you added to the *Container* control (e.g. workflow-steps)
+
 # Applying the CSS
 The CSS below is required for the correct functioning of the module. Some elements can be customised using a variables CSS file. How to apply the CSS to your application
 
