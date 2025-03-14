@@ -296,19 +296,26 @@ for (let i = 0; i < arrupdates.length; i++) {
 
 ![](images/UpdateEventHandler.png)
 
-Example update definition that adds/removes the classes "current" and "completed" from all items with the class "substep3-2":
+Example update definition that 
+1. Adds/removes the classes "current" and "success" from all items with the class "substep3-1"
+2. Adds/removes the classes "current" and "pending" from all items with the class "substep3-2"
 ```json
 [{
+	"stepclass": "substep3-1",
+	"description": "Completed successfully",
+	"addremoveclasses": ["current","success"]
+},{
 	"stepclass": "substep3-2",
-	"addremoveclasses": ["current","completed"]
+	"description": "Current",
+	"addremoveclasses": ["current","pending"]
 }]
 ```
 
-Example update definition that removes the classes "pending" from all items with the class "pending" and adds the class "completed":
+Example update definition that removes the classes "pending" from all items with the class "pending" and adds the class "success":
 ```json
 [{
 	"stepclass": "pending",
-	"addremoveclasses": ["pending","completed"]
+	"addremoveclasses": ["pending","success"]
 }]
 ```
 
