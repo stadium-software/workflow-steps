@@ -222,9 +222,11 @@ Additional statuses can also be added by
 
 Example status (mystatus) CSS:
 ```css
+/*main step with class 'mystatus'*/
 .workflow-steps-item-container.mainstep.mystatus > .workflow-steps-step-title > span {
     font-weight: bold;
 }
+/*substep with class 'mystatus'*/
 .substep.mystatus {
     /*icon*/
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 48 48'%3E%3C!-- Icon from All by undefined - undefined --%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='m6 11l5-5l13 13L37 6l5 5l-13 13l13 13l-5 5l-13-13l-13 13l-5-5l13-13z' clip-rule='evenodd'/%3E%3C/svg%3E");
