@@ -201,6 +201,11 @@ Example Workflow Definition:
 }]
 ```
 
+4. Drag the Global Script called "WorkflowSteps2" to the event handler
+5. Complete the input parameters
+   1. Steps: The list of steps (e.g. StepsList)
+   2. ContainerClass: The class you added to the *Container* control (e.g. workflow-steps)
+
 ## Preconfigured Statuses
 The module comes with five preconfigured statuses:
 - pending
