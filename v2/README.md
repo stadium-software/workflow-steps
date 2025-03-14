@@ -127,7 +127,7 @@ if (arrSteps) {
 2. Select the "WorkflowStep" type in the *Item Type* property dropdown of the *List*
 3. Define the workflow steps
    1. title: The label shown at the top level of the step
-   2. classes: A list of CSS classes attached to the step (used to style steps and update them)
+   2. classes: A list of CSS classes attached to the step. Attach one unique classname to identify the step (e.g. step1-3) and a status (e.g. pending, current or success - see [Preconfigured Statuses](#preconfigured-statuses) below)
    3. link: A link for the step
    4. description: Text to show in a tooltip on hover of the step
    5. steps: A set of sub-steps
@@ -138,36 +138,36 @@ Example Workflow Definition:
 ```json
 [{
 	"title": "File Upload",
-	"classes":["success"],
+	"classes":["step1", "success"],
     "link": "/FileUploadPage",
 	"steps": [{
 		"title": "File 1",
 		"link": "/File1Upload",
-		"classes": ["success"]
+		"classes": ["substep3-1", "success"]
 	},{
 		"title": "File 2",
 		"link": "/File2Upload",
-		"classes": ["success"]
+		"classes": ["substep3-2", "success"]
 	}]
 },{
 	"title": "Data Import",
-	"classes": ["success"],
+	"classes": ["step2", "success"],
     "link": "/DataImportPage",
 	"steps": [{
 		"title": "Validation",
-		"classes": ["success"]
+		"classes": ["substep3-1", "success"]
 	},{
 		"title": "Enrichment",
-		"classes": ["warning"],
+		"classes": ["substep3-2", "warning"],
 		"description": "Item 12:14 was empty"
 	},{
 		"title": "Import",
-		"classes": ["error"],
+		"classes": ["substep3-3", "error"],
 		"description": "Import failed due to an error on 12:14"
 	}]
 },{
 	"title": "Review",
-	"classes": ["current"],
+	"classes": ["step3", "current"],
 	"link": "/ReviewPage",
 	"steps": [{
 		"title": "Dataset 1",
@@ -178,25 +178,25 @@ Example Workflow Definition:
 	}]
 },{
 	"title": "Report Generation",
-	"classes": ["pending"],
+	"classes": ["step4", "pending"],
 	"link": "/GenerationPage",
 	"steps": [{
 		"title": "Report 1",
-		"classes": ["pending"]
+		"classes": ["substep4-1", "pending"]
 	},{
 		"title": "Report 2",
-		"classes": ["pending"]
+		"classes": ["substep4-2", "pending"]
 	}]
 },{
 	"title": "Report Delivery",
-	"classes": ["pending"],
+	"classes": ["step5", "pending"],
 	"link": "/ReportSendPage",
 	"steps": [{
 		"title": "Email 1",
-		"classes": ["pending"]
+		"classes": ["substep5-1", "pending"]
 	},{
 		"title": "Email 2",
-		"classes": ["pending"]
+		"classes": ["substep5-2", "pending"]
 	}]
 }]
 ```
@@ -214,25 +214,33 @@ The module comes with five preconfigured statuses:
 - warning
 - error
 
-The styling for each status can be overridden in the 
+The default styling for each status can be changed in the [*workflow-steps2-variables.css*](workflow-steps2-variables.css) file. 
 
-Additional statuses can be added by defining them in the stylesheet and by adding the class to the classes property of that step or substep like so: 
+Additional statuses can also be added by 
+1. Defining classes for them in the stylesheet
+2. Adding the class to the "classes" property of that step or substep
+
+Example status (mystatus) CSS:
 ```css
 .workflow-steps-item-container.mainstep.mystatus > .workflow-steps-step-title > span {
     font-weight: bold;
 }
 .substep.mystatus {
+    /*icon*/
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1em' height='1em' viewBox='0 0 48 48'%3E%3C!-- Icon from All by undefined - undefined --%3E%3Cpath fill='none' stroke='%23FFFFFF' stroke-linecap='round' stroke-linejoin='round' stroke-width='4' d='m6 11l5-5l13 13L37 6l5 5l-13 13l13 13l-5 5l-13-13l-13 13l-5-5l13-13z' clip-rule='evenodd'/%3E%3C/svg%3E");
+    /*background color*/
     background-color: orange;
+    /*font color*/
     color: #333;
     a {
+        /*link font color*/
         color: #333;
     }
 }
 ```
 
 # Updating Steps
-A second type and script is needed to update steps
+A separate type and script are needed to update steps
 
 ## Type Setup
 1. Create a new Type and call it "WorkflowStepsUpdate"
