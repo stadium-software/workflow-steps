@@ -130,7 +130,7 @@ if (arrSteps) {
    2. classes: A list of CSS classes attached to the step. Attach one unique classname to identify the step (e.g. step1-3) and a status (e.g. pending, current or success - see [Preconfigured Statuses](#preconfigured-statuses) below)
    3. link: A link for the step
    4. description: Text to show in a tooltip on hover of the step
-   5. steps: A set of sub-steps
+   5. steps: A set of sub-steps (the module only supports one sub-level of steps) 
 
 ![Event Handler](images/EventHandler.png)
 
@@ -307,8 +307,8 @@ for (let i = 0; i < arrupdates.length; i++) {
 ![](images/UpdateEventHandler.png)
 
 Example update definition that 
-1. Adds/removes the classes "current" and "success" from all items with the class "substep3-1"
-2. Adds/removes the classes "current" and "pending" from all items with the class "substep3-2"
+   1. Adds/removes the classes "current" and "success" from all items with the class "substep3-1"
+   2. Adds/removes the classes "current" and "pending" from all items with the class "substep3-2"
 ```json
 [{
 	"stepclass": "substep3-1",
@@ -321,7 +321,8 @@ Example update definition that
 }]
 ```
 
-Example update definition that removes the class "pending" from all items with the class "pending" and adds the class "success":
+Example update definition that 
+   1. Removes the class "pending" from all items with the class "pending" and adds the class "success"
 ```json
 [{
 	"stepclass": "pending",
