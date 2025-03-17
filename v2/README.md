@@ -307,8 +307,8 @@ for (let i = 0; i < arrupdates.length; i++) {
 ![](images/UpdateEventHandler.png)
 
 Example update definition that 
-   1. Adds/removes the classes "current" and "success" from all items with the class "substep3-1"
-   2. Adds/removes the classes "current" and "pending" from all items with the class "substep3-2"
+   i. Adds/removes the classes "current" and "success" from all items with the class "substep3-1"
+   ii. Adds/removes the classes "current" and "pending" from all items with the class "substep3-2"
 ```json
 [{
 	"stepclass": "substep3-1",
@@ -322,7 +322,7 @@ Example update definition that
 ```
 
 Example update definition that 
-   1. Removes the class "pending" from all items with the class "pending" and adds the class "success"
+   i. Removes the class "pending" from all items with the class "pending" and adds the class "success"
 ```json
 [{
 	"stepclass": "pending",
