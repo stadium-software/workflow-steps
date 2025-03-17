@@ -255,7 +255,7 @@ A separate type and script are needed to update steps
 
 ## Type Setup
 1. Create a new Type and call it "WorkflowStepsUpdate"
-2. Add the two properties below to the type
+2. Add the properties below to the type
    1. stepclass (Any)
    2. description (Any)
    3. addremoveclasses (List)
