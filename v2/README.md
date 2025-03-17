@@ -306,7 +306,7 @@ for (let i = 0; i < arrupdates.length; i++) {
 ```
 
 ## Event Handler Setup
-1. Drag a *List* control into the Page.Load event handler and name it (e.g. UpdatesList)
+1. Drag a *List* action into the Page.Load event handler and name it (e.g. UpdatesList)
 2. Select the "WorkflowStepsUpdate" type in the *Item Type* property dropdown of the *List*
 3. Define the workflow steps
    1. stepclass: A class that uniquely identifies one step or a class that identifies multiple steps to update
