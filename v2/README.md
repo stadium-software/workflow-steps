@@ -211,7 +211,7 @@ Example Workflow Definition:
    2. ContainerClass: The class you added to the *Container* control (e.g. workflow-steps)
 
 ## Workflow Step Statuses
-The module cpomes with a set of preconfigured statuses that can be customised as required. Additional custom statuses can also be added. 
+The module comes with a set of preconfigured statuses that can be customised as required. Additional custom statuses can also be added. 
 
 ### Preconfigured Statuses
 The module comes with five preconfigured statuses:
