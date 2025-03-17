@@ -12,7 +12,9 @@ https://github.com/user-attachments/assets/2094e1bc-75e4-4e05-87fd-e4e9a2f3bb5e
   - [Global Script Setup](#global-script-setup)
   - [Page Setup](#page-setup)
   - [Page.Load Setup](#pageload-setup)
-  - [Preconfigured Statuses](#preconfigured-statuses)
+  - [Workflow Step Statuses](#workflow-step-statuses)
+    - [Preconfigured Statuses](#preconfigured-statuses)
+    - [Custom Statuses](#custom-statuses)
 - [Updating Steps](#updating-steps)
   - [Type Setup](#type-setup-1)
   - [Global Script Setup](#global-script-setup-1)
@@ -127,7 +129,9 @@ if (arrSteps) {
 2. Select the "WorkflowStep" type in the *Item Type* property dropdown of the *List*
 3. Define the workflow steps
    1. title: The label shown at the top level of the step
-   2. classes: A list of CSS classes attached to the step. Attach one unique classname to identify the step (e.g. step1-3) and a status (e.g. pending, current or success - see [Preconfigured Statuses](#preconfigured-statuses) below)
+   2. classes: A list of CSS classes attached to the step. Attach 
+      1. A unique classname to identify the step (e.g. step1-3). This can later be used to update the step. 
+      2. A status (e.g. pending, current or success - see [Workflow Step Statuses](#workflow-step-statuses) below). 
    3. link: A link for the step
    4. description: Text to show in a tooltip on hover of the step
    5. steps: A set of sub-steps (the module only supports one sub-level of steps) 
@@ -206,7 +210,10 @@ Example Workflow Definition:
    1. Steps: The list of steps (e.g. StepsList)
    2. ContainerClass: The class you added to the *Container* control (e.g. workflow-steps)
 
-## Preconfigured Statuses
+## Workflow Step Statuses
+The module cpomes with a set of preconfigured statuses that can be customised as required. Additional custom statuses can also be added. 
+
+### Preconfigured Statuses
 The module comes with five preconfigured statuses:
 - pending
 - success
@@ -215,6 +222,8 @@ The module comes with five preconfigured statuses:
 - error
 
 The default styling for each status can be changed in the [*workflow-steps2-variables.css*](workflow-steps2-variables.css) file. 
+
+### Custom Statuses
 
 Additional statuses can also be added by 
 1. Defining classes for them in the stylesheet
