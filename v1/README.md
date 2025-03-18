@@ -201,7 +201,7 @@ To display icons referenced in your StyleSheet, follow these steps
 }
 ```
 
-### Iconfiy Icons Module
+### Iconifiy Icons Module
 In order to display icons using the Icons module, the [Icons Module](https://github.com/stadium-software/icons) must be implemented in the application. There is no need to call the "Icons" script from this repo as it will, if necessary, be called by the "WorkflowSteps" script below. The "Icons" Global Script and CSS files must, however, exist in the GlobalScripts and EnbeddedFiles folders as described in the [Icons](https://github.com/stadium-software/icons) repo. To implement an icon, follow these steps:
 
 1. Implement the [Icons](https://github.com/stadium-software/icons) module
