@@ -180,7 +180,7 @@ initWorkflow();
 There are two methods to display icons in workflow steps
 
 1. [Write your own CSS](#write-your-own-css) and use the classes in the StepsList (simpler to implement)
-2. Use the [Iconfiy Icons Module](#iconify-icons-module) (requires the setup of the [Iconify Icons Framework](https://github.com/stadium-software/icons) in the application)
+2. Use the [Iconifiy Icons Module](#iconify-icons-module) (requires the setup of the [Iconify Icons Framework](https://github.com/stadium-software/icons) in the application)
 
 ### Write your own CSS
 To display icons referenced in your StyleSheet, follow these steps
