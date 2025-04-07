@@ -19,11 +19,16 @@ https://github.com/user-attachments/assets/2094e1bc-75e4-4e05-87fd-e4e9a2f3bb5e
   - [Type Setup](#type-setup-1)
   - [Global Script Setup](#global-script-setup-1)
   - [Event Handler Setup](#event-handler-setup)
-- [Applying the CSS](#applying-the-css)
-- [Upgrading](#upgrading)
+  - [CSS](#css)
+    - [Before v6.12](#before-v612)
+    - [v6.12+](#v612)
+    - [Customising CSS](#customising-css)
+  - [Upgrading Stadium Repos](#upgrading-stadium-repos)
 
 # Version 
 2.0 - initial
+
+2.0.1 Updated readme for 6.12+; Updated default substep colors for Stadium 6.12+
 
 # Setup
 
@@ -347,10 +352,11 @@ Example update definition that
    1. Updates: The list of steps (e.g. UpdatesList)
    2. ContainerClass: The class you added to the *Container* control (e.g. workflow-steps)
 
-# Applying the CSS
-The CSS below is required for the correct functioning of the module. Some elements can be customised using a variables CSS file. How to apply the CSS to your application
+## CSS
+The CSS below is required for the correct functioning of the module. Variables exposed in the [*workflow-steps2-variables.css*](workflow-steps2-variables.css) file can be [customised](#customising-css).
 
-1. Create a folder called *CSS* inside of your Embedded Files in your application
+### Before v6.12
+1. Create a folder called "CSS" inside of your Embedded Files in your application
 2. Drag the two CSS files from this repo [*workflow-steps2-variables.css*](workflow-steps2-variables.css) and [*workflow-steps2.css*](workflow-steps2.css) into that folder
 3. Paste the link tags below into the *head* property of your application
 ```html
@@ -358,5 +364,28 @@ The CSS below is required for the correct functioning of the module. Some elemen
 <link rel="stylesheet" href="{EmbeddedFiles}/CSS/workflow-steps2-variables.css">
 ``` 
 
-# Upgrading
-To upgrade this module, follow the [steps outlined in this repo](https://github.com/stadium-software/samples-upgrading)
+### v6.12+
+1. Create a folder called "CSS" inside of your Embedded Files in your application
+2. Drag the CSS files from this repo [*workflow-steps2.css*](workflow-steps2.css) into that folder
+3. Paste the link tag below into the *head* property of your application
+```html
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/workflow-steps2.css">
+``` 
+
+### Customising CSS
+1. Open the CSS file called [*workflow-steps2-variables.css*](workflow-steps2-variables.css) from this repo
+2. Adjust the variables in the *:root* element as you see fit
+3. Stadium 6.12+ users can comment out any variable they do **not** want to customise
+4. Add the [*workflow-steps2-variables.css*](workflow-steps2-variables.css) to the "CSS" folder in the EmbeddedFiles (overwrite)
+5. Paste the link tag below into the *head* property of your application (if you don't already have it there)
+```html
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/workflow-steps2-variables.css">
+``` 
+6. Add the file to the "CSS" inside of your Embedded Files in your application
+
+**NOTE: Do not change any of the CSS in the 'workflow-steps2.css' file**
+
+## Upgrading Stadium Repos
+Stadium Repos are not static. They change as additional features are added and bugs are fixed. Using the right method to work with Stadium Repos allows for upgrading them in a controlled manner. 
+
+How to use and update application repos is described here: [Working with Stadium Repos](https://github.com/stadium-software/samples-upgrading)
