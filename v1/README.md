@@ -177,12 +177,6 @@ initWorkflow();
 ![Script inputs](images/ScriptInputs.png)
 
 ## Icons
-There are two methods to display icons in workflow steps
-
-1. [Write your own CSS](#write-your-own-css) and use the classes in the StepsList (simpler to implement)
-2. Use the [Iconifiy Icons Module](#iconifiy-icons-module) (requires the setup of the [Iconify Icons Framework](https://github.com/stadium-software/icons) in the application)
-
-### Write your own CSS
 To display icons referenced in your StyleSheet, follow these steps
 1. Craft selectors to match your statuses like below (the example is for the "pending" step)
 2. Find an icon file you want to use 
@@ -200,18 +194,6 @@ To display icons referenced in your StyleSheet, follow these steps
 	font-size: 0px;
 }
 ```
-
-### Iconifiy Icons Module
-In order to display icons using the Icons module, the [Icons Module](https://github.com/stadium-software/icons) must be implemented in the application. There is no need to call the "Icons" script from this repo as it will, if necessary, be called by the "WorkflowSteps" script below. The "Icons" Global Script and CSS files must, however, exist in the GlobalScripts and EnbeddedFiles folders as described in the [Icons](https://github.com/stadium-software/icons) repo. To implement an icon, follow these steps:
-
-1. Implement the [Icons](https://github.com/stadium-software/icons) module
-2. Locate the icon name (see [Finding an icon](https://github.com/stadium-software/icons#finding-an-icon))
-3. Copy the name of the symbol (e.g. ic:sharp-check or svg-spinners:gooey-balls-1) and paste it into the icon parameter
-
-**Styling icons**
-
-If you are using icons, you can additionally define the icon colours and sizes as classes (space-separated) (e.g. icon-size-16 icon-color-red) (see [Icon Styles](https://github.com/stadium-software/icons#icon-styles))
-
 ## Customising the display
 The *workflow-steps-variables.css* file included in this repo contains a set of variables that can be changed to customise the workflow-steps implementation 
 1. Open the CSS file called [*workflow-steps-variables.css*](workflow-steps-variables.css) from this repo in an editor of your choice (I recommend [VS Code](https://code.visualstudio.com/))
