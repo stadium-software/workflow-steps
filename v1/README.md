@@ -434,10 +434,10 @@ Example steps:
 
 ## Custom Status
 To display a custom step, follow these steps
-1. Find an icon file you want to use here https://icones.js.org/collection/all
+1. Find an icon you want to use here https://icones.js.org/collection/all
    1. Find and select an icon and select "Data URL"
    2. Paste the value into the background-image: url() function as shown below
-3. Add the class into the step `iconclass` property in the "StepsList"
+3. Add the class (without the :after, e.g. `todo`) into the step `iconclass` property in the "StepsList" (see above)
 4. Add a `backgroundcolor` property and a colour
 ```css
 .todo:after /*make sure you reference the :after pseudo class to change the icon attributes*/ {
