@@ -452,12 +452,9 @@ To display a custom step, follow these steps
 The *workflow-steps-variables.css* file included in this repo contains a set of variables that can be changed to customise the workflow-steps implementation 
 1. Open the CSS file called [*workflow-steps-variables.css*](workflow-steps-variables.css) from this repo in an editor of your choice (I recommend [VS Code](https://code.visualstudio.com/))
 2. Adjust the variables in the *:root* element as you see fit to change the general workflow display
-
-### Applying the CSS
-How to apply the CSS to your application
-1. Create a folder called *CSS* inside of your Embedded Files in your application
-2. Drag the two CSS files from this repo [*workflow-steps-variables.css*](workflow-steps-variables.css) and [*workflow-steps.css*](workflow-steps.css) into that folder
-3. Paste the link tags below into the *head* property of your application
+3. Create a folder called *CSS* inside of your Embedded Files in your application
+4. Drag the two CSS files from this repo [*workflow-steps-variables.css*](workflow-steps-variables.css) and [*workflow-steps.css*](workflow-steps.css) into that folder
+5. Paste the link tags below into the *head* property of your application
 ```html
 <link rel="stylesheet" href="{EmbeddedFiles}/CSS/workflow-steps-variables.css">
 ``` 
