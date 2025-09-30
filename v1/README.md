@@ -15,7 +15,7 @@ https://github.com/stadium-software/workflow-steps/assets/2085324/0fa1bae8-8bfa-
 1. Check the *Enable Style Sheet* checkbox in the application properties
 
 ## Type Setup
-The type can create one nested type manually or use the import option to generate the type in two parts. How the type is used remains the same
+You can import the type or create it manually
 
 ![Type Properties](images/TypeProperties.png)
 
