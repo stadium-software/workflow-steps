@@ -378,7 +378,7 @@ To change the direction to horizontal, add the class 'workflow-horizontal' to th
 4. Use the *Object Editor* to add your workflow steps
    1. title (optional): The title for the step
    2. description (optional): A subtitle to display under the title
-   3. status (optional): The following predefined statuses come with icons and clours, but you can also add your own
+   3. status (optional): The following predefined statuses come with icons and clours, but you can also [add your own](#custom-status)
       1. completed
       2. error
       3. warning
