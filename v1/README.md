@@ -374,8 +374,7 @@ To change the direction to horizontal, add the class 'workflow-horizontal' to th
 ## Page.Load Setup
 1. Drag a *List* control into the Page.Load event handler and name it (e.g. StepsList)
 2. Select the "WorkflowStep" type in the *Item Type* property dropdown of the *List*
-3. Create a `List` of objects containing all workflow steps you want to display
-4. Use the *Object Editor* or paste the json below into the `Expression Editor` and amend it as required
+3. Create a `List` of objects containing all workflow steps you want to display (use the *Object Editor* or paste the json below into the `Expression Editor` and amend it as required)
    1. title (optional): The title for the step
    2. description (optional): A subtitle to display under the title
    3. status (optional): The following predefined statuses come with icons and clours, but you can also [add your own](#custom-status)
