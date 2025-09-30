@@ -388,7 +388,7 @@ To change the direction to horizontal, add the class 'workflow-horizontal' to th
    5. iconcolor (optional): Add a color name or CSS color in any format
    6. link (optional): To turn a title into a link, add a URL
    7. backgroundcolor (optional): To customise the step circle background color, add a color name or CSS color in any format
-   8. position (optionaly): To define a specific position for a step, add a number
+   8. position (optional): To define a specific position for a step, add a number
 5. Drag the Global Script called "WorkflowSteps" into the Page.Load EventHandler
 6. Provide values for the script input parameters
    1. Steps: Select the List containing the workflow steps (e.g. "StepsList")
