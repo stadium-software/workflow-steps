@@ -1,4 +1,4 @@
-/* CSS version 1.0 https://github.com/stadium-software/workflow-steps */
+/* CSS version 1.3 https://github.com/stadium-software/workflow-steps */
 :root {
 	--workflow-container-width: auto;
 	--workflow-container-background-color: #fff;
@@ -26,41 +26,32 @@
 	--workflow-item-circle-border-size: 1px;
 	--workflow-item-circle-border-style: solid;
 	--workflow-item-icon-color: #333;
-	--workflow-item-icon-background-color: #f5f5f5;
+	--workflow-item-icon-background-color: #cccccc;
 	--workflow-item-icon-distance-from-title: 10px;
-}
+	--workflow-item-icon-size: 24px;
 
-.workflow-steps-item-container[status='ok'],
-.workflow-steps-item-container[status='complete'],
-.workflow-steps-item-container[status='completed'],
-.workflow-steps-item-container[status='done'] {
-	--workflow-item-icon-background-color: #009688;
-	--workflow-item-icon-color: white;
-}
+	/*Complete Icon*/
+	--workflow-item-completed-icon-background-color: #009688;
+	--workflow-item-completed-icon-color: white;
+	--workflow-item-completed-circle-border-color: #ccc;
 
-.workflow-steps-item-container[status='error'] {
-	--workflow-item-icon-background-color: #954661;
-	--workflow-item-icon-color: #fff;
-}
+	/*Error Icon*/
+	--workflow-item-error-icon-background-color: #954661;
+	--workflow-item-error-icon-color: #fff;
+	--workflow-item-error-circle-border-color: #ccc;
 
-.workflow-steps-item-container[status='warning'] {
-	--workflow-item-icon-background-color: #EEE8A9;
-	--workflow-item-icon-color: #333;
-}
+	/*Warning Icon*/
+	--workflow-item-warning-icon-background-color: #EEE8A9;
+	--workflow-item-warning-icon-color: #333;
+	--workflow-item-warning-circle-border-color: #ccc;
 
-.workflow-steps-item-container[status='current'] {
-	--workflow-item-icon-background-color: #20639B;
-	--workflow-item-icon-color: white;
+	/*Current Icon*/
+	--workflow-item-current-icon-background-color: #20639B;
+	--workflow-item-current-icon-color: white;
+	--workflow-item-current-circle-border-color: #ccc;
 
-	& .workflow-steps-step-icon {
-		outline: 3px solid #20639B;
-		outline-offset: 3px;
-		box-shadow: 0 0 0 3px var(--workflow-container-background-color);
-	}
-}
-
-.workflow-steps-item-container[status='pending'] {
-	--workflow-item-icon-background-color: #f2f2f2;
-	--workflow-item-icon-color: #333;
-	--workflow-item-circle-border-color: #ccc;
+	/*Pending Icon*/
+	--workflow-item-pending-icon-background-color: #f2f2f2;
+	--workflow-item-pending-icon-color: #333;
+	--workflow-item-pending-circle-border-color: #ccc;
 }
